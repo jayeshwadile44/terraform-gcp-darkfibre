@@ -18,5 +18,5 @@ variable "gcp_region1" {
 variable "machine_type" {
     description = "compute version machine type"
     type = string
-    default = "e2-small"
+    default = "e2-micro"
 }

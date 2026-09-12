@@ -11,8 +11,8 @@ terraform {
 
 # Terraform Provider Block
 provider "google" {
-  project = "var.gcp_project" # PROJECT_ID
-  region = "var.gcp_region1"
+  project = var.gcp_project # PROJECT_ID
+  region = var.gcp_region1
   alias = "alias_us-central1"
 
   default_labels = {
