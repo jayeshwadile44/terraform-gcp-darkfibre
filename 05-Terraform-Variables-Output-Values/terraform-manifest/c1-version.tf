@@ -1,20 +1,19 @@
 # Terraform Settings Block
 terraform {
   required_version = "~> 1.16.2"
-
   required_providers {
     google = {
-      source  = "hashicorp/google"
+      source = "hashicorp/google"
       version = "~> 8.2.0"
     }
   }
 }
 
-# Terraform Provider Block ( Heart of terraform)
+# Terraform Provider Block
 provider "google" {
-  project = "darkfiber-terraform" # PROJECT_ID
-  region  = "us-central1"
-  zone    = "us-central1-a"
+  project = "var.gcp_project" # PROJECT_ID
+  region = "var.gcp_region1"
+  alias = "alias_us-central1"
 
   default_labels = {
     environment = "dev"
